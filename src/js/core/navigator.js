@@ -400,7 +400,7 @@
       return;
     }
 
-    var api = {close: close};
+    var api = {close: close, nextPage: nextPageName};
 
     if(riotEnabled) {
       phonon.tagManager.trigger(pageName, 'close', api);
@@ -683,6 +683,7 @@
     var formData;
 
     if(evt.type == 'submit'){ // dev
+        /*
       var formAction = target.getAttribute('action');
       if(formAction.match(new RegExp('^#'+opts.hashPrefix))){
           evt.preventDefault();
@@ -693,6 +694,7 @@
           }, serializeForm(evt)); // dev
           return changePage(formAction.substr(1+(opts.hashPrefix.length)))
       }
+      */
     }
 
     for (; target && target !== document; target = target.parentNode) {
