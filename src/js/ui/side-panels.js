@@ -31,7 +31,7 @@
 			minPosition: -266,
 			tapToClose: true,
 			touchToDrag: true,
-			slideIntent: 40, // degrees
+			slideIntent: 180, // degrees
 			minDragDistance: 5
 		},
 		cache = {
@@ -386,6 +386,7 @@
 							}
 							cache.intentChecked = true;
 						}
+                                                cache.hasIntent = false;
 
 						if (
 							(settings.minDragDistance>=Math.abs(thePageX-cache.startDragX)) || // Has user met minimum drag distance?
